@@ -5,13 +5,14 @@ import (
 	"context"
 	_ "embed"
 	"fmt"
-	"github.com/eclipse/paho.golang/paho"
-	"github.com/perbu/whippet/whippet"
 	"io"
 	"log/slog"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/eclipse/paho.golang/paho"
+	"github.com/perbu/whippet/whippet"
 )
 
 //go:embed .version
@@ -39,7 +40,7 @@ func run(ctx context.Context, logoutput, output io.Writer, input io.Reader, args
 	if showhelp {
 		return nil
 	}
-	logger.Info("whippet starting up", "version", embeddedVersion)
+	logger.Info("client starting up", "version", embeddedVersion)
 	client, msgChan, err := whippet.Connect(runCtx, config, logger)
 	if err != nil {
 		return fmt.Errorf("connect: %w", err)
