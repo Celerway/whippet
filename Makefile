@@ -22,7 +22,7 @@ include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
 
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
-	cp -r src/* $(PKG_BUILD_DIR)/
+	cp -r src/* src/.version $(PKG_BUILD_DIR)/
 endef
 
 define Package/whippet

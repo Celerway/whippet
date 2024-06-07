@@ -6,14 +6,14 @@ import (
 	"crypto/rand"
 	"flag"
 	"fmt"
-	"log/slog"
-	mathrand "math/rand/v2"
 	"net"
 	"os"
 	"strings"
 	"time"
 
 	"github.com/eclipse/paho.golang/paho"
+	mathrand "golang.org/x/exp/rand"
+	"golang.org/x/exp/slog"
 )
 
 const (

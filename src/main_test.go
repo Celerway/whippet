@@ -4,17 +4,18 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/eclipse/paho.golang/paho"
-	"github.com/mochi-mqtt/server/v2"
-	"github.com/mochi-mqtt/server/v2/hooks/auth"
-	"github.com/mochi-mqtt/server/v2/listeners"
-	"github.com/perbu/whippet/whippet"
 	"io"
-	"log/slog"
-	"math/rand/v2"
 	"net"
 	"os"
 	"testing"
+
+	"github.com/eclipse/paho.golang/paho"
+	mqtt "github.com/mochi-mqtt/server/v2"
+	"github.com/mochi-mqtt/server/v2/hooks/auth"
+	"github.com/mochi-mqtt/server/v2/listeners"
+	"github.com/perbu/whippet/whippet"
+	"golang.org/x/exp/rand"
+	"golang.org/x/exp/slog"
 )
 
 func TestMain(m *testing.M) {

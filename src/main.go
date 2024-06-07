@@ -6,13 +6,14 @@ import (
 	_ "embed"
 	"fmt"
 	"io"
-	"log/slog"
+
 	"os"
 	"os/signal"
 	"syscall"
 
 	"github.com/eclipse/paho.golang/paho"
 	"github.com/perbu/whippet/whippet"
+	"golang.org/x/exp/slog"
 )
 
 //go:embed .version
