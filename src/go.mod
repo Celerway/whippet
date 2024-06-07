@@ -1,6 +1,6 @@
 module github.com/perbu/whippet
 
-go 1.22.2
+go 1.22
 
 require (
 	github.com/eclipse/paho.golang v0.21.0
