@@ -36,7 +36,7 @@ TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include
 
 define Package/whippet/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(CP) $(PKG_BUILD_DIR)/whippet $(1)/usr/bin
+	$(CP) $(PKG_BUILD_DIR)/whippet-cli $(1)/usr/bin/whippet
 endef
 
 $(eval $(call GoBinPackage,whippet))
